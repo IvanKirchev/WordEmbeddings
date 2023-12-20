@@ -3,3 +3,7 @@ include
 lib
 lib64
 share
+logs
+vectors.tsv
+metadata.tsv
+__pycache__

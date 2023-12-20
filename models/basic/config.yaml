@@ -1,0 +1,5 @@
+dataset_path: 'corpus.txt'
+learning_rate: 0.01
+epochs: 20
+window_size: 5
+embedding_dim: 50
