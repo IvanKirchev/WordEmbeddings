@@ -1,15 +1,20 @@
 # Word Embedding
 
-Word Embedding implementations based on Word2Vec and GloVe algorithms
+Word Embedding implementations based on Word2Vec concept. 
+Users can replace corpus.txt will most text but beware that I've probably missed not so common symbols during text preprocessing. Feel free to file issues.
 
 ## Usage
-Single entry point to the two available models. Configuration is read from config.yaml file located in the source dorectory of the models.
+Single entry point for the two available models. Configuration like learning_rate, epochs, etc. is read from a config.yaml file located in the source directory of a model.
+
 ```
-python3 main.py [bais | negative_sampling]
+python3 main.py [basic | negative_sampling]
 ```
 
 ## From scratch implementation using TF only for the autodiff
 
-The source code for this model is located in word2vec.py
+* This is oversimplified word2vec implementation using the naive approach of processing the softmax activations on every entry in the vocabulary.
+
+* Evaluation is done by calculating the euclidean distances between the following two pairs of word embeddings (man - boy) and (father - son). I haven't explored this score of recent SOTA word embedding but a good score is assumed to be very close to zero > 0.001.
 
 ## Tensorflow and Keras implementation of Word2Vec with negative sampling
+* Word2Vec with negative sampling
